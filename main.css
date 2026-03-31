@@ -1,0 +1,23 @@
+header {
+    border-width: 3px;
+    border-style: solid;
+    height: 20%;
+    margin: 2%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+ header h1 {
+    font-size: 2vw;
+ }
+
+.logo img {
+    height: auto;
+    padding-left: 2vw;
+    padding-right: ;
+}
+
+h1{
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+}
