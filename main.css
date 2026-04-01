@@ -1,23 +1,44 @@
 header {
     border-width: 3px;
     border-style: solid;
-    height: 20%;
     margin: 2%;
     width: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-right: 10%;
+    padding-left: 5%;
 }
  header h1 {
     font-size: 2vw;
  }
 
 .logo img {
+    width: 10vw;
+    max-width: 120px;
+    min-width: 60px;
     height: auto;
-    padding-left: 2vw;
-    padding-right: ;
 }
 
 h1{
     font-family: 'Rubik', sans-serif;
     font-weight: normal;
+}
+
+.labā_puse {
+    display: flex;
+    gap: 15%;
+}
+body {
+    background-color: #E6E8E6;
+    color: #191919;
+    margin: 0;
+}
+
+.Shop {
+    padding-right: 10%;
+}
+
+h1 {
+    margin: 0;
 }
