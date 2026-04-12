@@ -1,17 +1,49 @@
-header {
-    border-width: 3px;
-    border-style: solid;
-    margin: 2%;
-    width: auto;
+nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-right: 10%;
-    padding-left: 5%;
+    align-items: center;
+    margin: 2%;
+    padding: 1% 5%;
+    background: #fff;
+    border: 2px solid #BB7E8C;
+    box-shadow: rgba(50,50,93,0.25) 0 2px 5px -1px,
+                rgba(0,0,0,0.3) 0 1px 3px -1px;
 }
- header h1 {
+
+nav a {
+    position: relative;
     font-size: 2vw;
- }
+    color: #191919;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+nav a::before,
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3A6EA5;
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+
+nav a::before {
+     top: -4px; transform-origin: left; 
+}
+
+nav a::after { 
+    bottom: -4px; transform-origin: right;
+}
+
+nav a:hover::before,
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
 
 .logo img {
     width: 10vw;
@@ -20,7 +52,19 @@ header {
     height: auto;
 }
 
-h1{
+a {
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+}
+
+
+h2 { 
     font-family: 'Rubik', sans-serif;
     font-weight: normal;
 }
@@ -29,10 +73,12 @@ h1{
     display: flex;
     gap: 15%;
 }
+
 body {
     background-color: #E6E8E6;
     color: #191919;
     margin: 0;
+    padding: 2%;
 }
 
 .Shop {
@@ -41,4 +87,354 @@ body {
 
 h1 {
     margin: 0;
+}
+
+.hero img {
+    width: 96%;
+    -webkit-mask-image: radial-gradient(ellipse, black 60%, transparent 100%);
+    mask-image: radial-gradient(ellipse, black 60%, transparent 100%);
+}
+
+.shop_now {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    padding: 10px 20px;
+    border: 2px solid #BB7E8C;
+    background-color: #191919;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s ease;
+    font-size: 3vw;
+}
+
+/* holographic slīdošā gaisma */
+.shop_now::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        0deg,
+        transparent,
+        transparent 30%,
+        #3A6EA580
+    );
+    transform: rotate(-45deg) translateY(-100%);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+/* hover efekts */
+.shop_now:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #3A6EA580
+}
+
+.shop_now:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+main img {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.hero_virsraksts h1 {
+    color: #BB7E8C;
+    font-size: 6vw;
+    font-weight: 900;
+}
+
+.hero_virsraksts h2 {
+    font-size: 2vw;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.hero_virsraksts {
+    position: absolute;
+    font-size: 4vw;
+    color: rgb(190, 190, 190);
+    z-index: 2;
+    margin-left: 5%;
+    top: 20%;
+    background-color: #19191983;
+    width: 35%;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+.hero_virsraksts:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.atlaides img {
+    width: 60%;
+    height: auto;
+}
+
+.bildes {
+    display: flex;
+    justify-content: start;
+    position: relative;
+    left: 4.5%;
+}
+
+.bildes img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bildes img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.bildes_jaunumiem img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bildes_jaunumiem img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.atlaides {
+    border: solid #BB7E8C 2px;
+    margin: 2%;
+    background-color: #FFFFFF;
+    padding-bottom: 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.atlaides > h1:first-of-type {
+    position: relative;
+    left: 5%;
+    border-bottom: 2px solid #BB7E8C;
+    width: 90%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    font-size: 2.5vw;
+    font-weight: 550;
+    margin-bottom: 2%;
+}
+
+.bildes h2 {
+    font-size: 2vw;
+    width: 60%;
+    padding-left: 2%;
+}
+
+.bildes h1 {
+    font-size: 3vw;
+}
+
+.cenas1 :nth-child(1) {
+    text-decoration: line-through;
+}
+
+.cenas1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+}
+
+.cenas1 h2 {
+    margin: 0;
+    width: auto;
+    padding-left: 5%;
+}
+
+.produkts1 > h2:only-of-type {
+    padding-left: 6%;
+}
+
+.cenas2 :nth-child(1) {
+    text-decoration: line-through;
+}
+
+.cenas2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+    
+}
+
+.cenas2 h2 {
+    margin: 0;
+    width: auto;
+    padding-left: 5%;
+}
+
+.produkts2 > h2:only-of-type {
+    padding-left: 10%;
+}
+
+.cenas3 :nth-child(1) {
+    text-decoration: line-through;
+}
+
+.cenas3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+}
+
+.cenas3 h2 {
+    margin: 0;
+    width: auto;
+    padding-left: 5%;
+}
+
+.produkts3 > h2:only-of-type {
+    padding-left: 6%;
+}
+
+.cenas4 :nth-child(1) {
+    text-decoration: line-through;
+}
+
+.cenas4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+}
+
+.cenas4 h2 {
+    margin: 0;
+    width: auto;
+    padding-left: 7%;
+}
+
+.produkts4 > h2:only-of-type {
+    padding-left: 10%;
+}
+
+.jaunumi img {
+    width: 60%;
+    height: auto;
+}
+
+.bildes_jaunumiem {
+    display: flex;
+    justify-content: start;
+    position: relative;
+    left: 4.5%;
+}
+
+.jaunumi {
+    border: solid #BB7E8C 2px;
+    margin: 2%;
+    background-color: #FFFFFF;
+    padding-bottom: 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.jaunumi > h1:first-of-type {
+    position: relative;
+    left: 5%;
+    border-bottom: 2px solid #BB7E8C;
+    width: 90%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    font-size: 2.5vw;
+    font-weight: 550;
+    margin-bottom: 2%;    
+}
+
+.bildes_jaunumiem h2 {
+    font-size: 2vw;
+    width: 60%;
+    padding-left: 2%;
+}
+
+.bildes_jaunumiem h1 {
+    font-size: 3vw;
+}
+
+.jaunums1 > h2:only-of-type {
+    padding-left: 6%;
+}
+
+.jaunums1 h1 {
+    padding-left: 15%;
+}
+
+.jaunums2 > h2:only-of-type {
+    padding-left: 10%;
+}
+
+.jaunums2 h1 {
+    padding-left: 15%;
+}
+
+.jaunums3 > h2:only-of-type {
+    padding-left: 2%;
+    padding-top: 10%;
+}
+
+.jaunums3 h1 {
+    padding-left: 15%;
+}
+
+.jaunums4 > h2:only-of-type {
+    padding-left: 8%;
+    padding-top: 10%;
+}
+
+.jaunums4 h1 {
+    padding-left: 20%;
+}
+
+.kontakti {
+    border: solid #BB7E8C 2px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #FFFFFF;
+    padding-bottom: 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.kontakti h2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+    padding-top: 2%;
+    gap: 0.5vw;
+    margin: 0;
+}
+
+.kontakti:nth-child(1) {
+    padding-top: 1%;
+}
+
+.pirmā_rinda {
+    display: flex;   
+    justify-content: space-between;
+}
+
+.autortiesības {
+    border-top: solid #BB7E8C 2px;
+    border-bottom: solid #BB7E8C 2px;
+    margin: 2%;
+    background-color: #dedfde;
+    padding-bottom: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-bottom: 10%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.autortiesības h2 {
+    margin-bottom: 0;
 }
