@@ -110,7 +110,6 @@ h1 {
     font-size: 3vw;
 }
 
-/* holographic slīdošā gaisma */
 .shop_now::before {
     content: '';
     position: absolute;
@@ -129,7 +128,6 @@ h1 {
     transition: 0.5s ease;
 }
 
-/* hover efekts */
 .shop_now:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #3A6EA580
@@ -164,7 +162,7 @@ main img {
     color: rgb(190, 190, 190);
     z-index: 2;
     margin-left: 5%;
-    top: 20%;
+    top: 25%;
     background-color: #19191983;
     width: 35%;
     border-radius: 20px;
