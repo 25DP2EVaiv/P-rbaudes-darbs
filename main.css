@@ -121,7 +121,7 @@ h1 {
         0deg,
         transparent,
         transparent 30%,
-        #3A6EA580 /*sākumā caurspidigs un tas viegli caurspidigs
+        #3A6EA580 /*sākumā caurspidigs un tas viegli caurspidigs*/
     );
     transform: rotate(-45deg) translateY(-100%);/*pagrizts slīpi*/
     opacity: 0; /*Sākumā neredzams*/
