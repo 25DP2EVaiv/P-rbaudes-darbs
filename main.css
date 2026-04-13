@@ -11,7 +11,7 @@ nav {
 }
 
 nav a {
-    position: relative;
+    position: relative; /*Vajag lai before un after būtu pozicionēti attiecībā pret to*/
     font-size: 2vw;
     color: #191919;
     text-decoration: none;
@@ -20,27 +20,27 @@ nav a {
 
 nav a::before,
 nav a::after {
-    content: "";
+    content: ""; /*  izveido līnijas*/
     position: absolute;
     left: 0;
     width: 100%;
     height: 2px;
     background: #3A6EA5;
-    transform: scaleX(0);
-    transition: 0.3s;
+    transform: scaleX(0); /*Saspiež sākuma līniju, ka tā ir neredzama*/
+    transition: 0.3s;/*Animācijas darbības ilgums*/
 }
 
 nav a::before {
-     top: -4px; transform-origin: left; 
+     top: -4px; transform-origin: left; /*Augšējā daļa sākās no kreisās puses*/
 }
 
 nav a::after { 
-    bottom: -4px; transform-origin: right;
+    bottom: -4px; transform-origin: right; /*Animācija apakšējā daļa sākās no labās puses*/
 }
 
 nav a:hover::before,
 nav a:hover::after {
-    transform: scaleX(1);
+    transform: scaleX(1); /*Animācija izplešās līdz pilnam platumam*/
 }
 
 
@@ -105,14 +105,14 @@ h1 {
     color: #fff;
     border-radius: 15px;
     cursor: pointer;
-    overflow: hidden;
-    transition: 0.3s ease;
+    overflow: hidden; /*Paslēpj to kas pāriet pāri pogai*/
+    transition: 0.3s ease; /*veido gludu animāciju*/
     font-size: 3vw;
 }
 
 .shop_now::before {
     content: '';
-    position: absolute;
+    position: absolute; /*Izveido pseidoelementu virs pogas*/
     top: -50%;
     left: -50%;
     width: 200%;
@@ -121,21 +121,21 @@ h1 {
         0deg,
         transparent,
         transparent 30%,
-        #3A6EA580
+        #3A6EA580 /*sākumā caurspidigs un tas viegli caurspidigs
     );
-    transform: rotate(-45deg) translateY(-100%);
-    opacity: 0;
+    transform: rotate(-45deg) translateY(-100%);/*pagrizts slīpi*/
+    opacity: 0; /*Sākumā neredzams*/
     transition: 0.5s ease;
 }
 
 .shop_now:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #3A6EA580
+    transform: scale(1.05); /*Nedaudz palielinās*/
+    box-shadow: 0 0 15px #3A6EA580 /*Parādās mīksts gaismas efekts*/
 }
 
 .shop_now:hover::before {
-    opacity: 1;
-    transform: rotate(-45deg) translateY(100%);
+    opacity: 1; /*Spīdums kļūst redzams*/
+    transform: rotate(-45deg) translateY(100%); /*Spīd pāri pogai*/
 }
 
 main img {
